@@ -13,3 +13,9 @@ prop.table(table(rej,Group),margin=2) #proprtion table. Margin=2 gives column pe
 #Stat tests
 chisq.test(rej,Group) #chi squared test (notice warning for small samples)
 fisher.test(rej,Group) #Fisher's exact
+
+#Input data as table to analyze
+M<-as.table(rbind(c(21,18,6),c(15,6,14))) #copied from the paper table
+dimnames(M)<-list(dialysis=c("Y","N"),
+                  disease=c('ren disp','lupus','others'))
+chisq.test(M)

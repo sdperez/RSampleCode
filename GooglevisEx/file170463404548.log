@@ -1,0 +1,46 @@
+1                                                          The SAS System                             10:31 Thursday, August 7, 2014
+
+NOTE: Unable to open SASUSER.REGSTRY. WORK.REGSTRY will be opened instead.
+NOTE: All registry changes will be lost at the end of the session.
+
+WARNING: Unable to copy SASUSER registry to WORK registry. Because of this, you will not see registry customizations during this 
+         session.
+ERROR: Expecting page 1, got page -1 instead.
+ERROR: Page validation error while reading SASUSER.PROFILE.CATALOG.
+NOTE: Unable to open SASUSER.PROFILE. WORK.PROFILE will be opened instead.
+NOTE: All profile changes will be lost at the end of the session.
+NOTE: Copyright (c) 2002-2008 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.2 (TS1M0) 
+      Licensed to EMORY UNIVERSITY - T&R, Site 0070008592.
+NOTE: This session is executing on the W32_VSPRO  platform.
+
+
+
+NOTE: SAS initialization used:
+      real time           0.45 seconds
+      cpu time            0.45 seconds
+      
+1          option validvarname = v6;libname src2rd '/Program Files/SAS/SASFoundation/9.2/core/sashelp';
+NOTE: Libname SRC2RD refers to the same physical library as SASHELP.
+NOTE: Libref SRC2RD was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: C:\Program Files\SAS\SASFoundation\9.2\core\sashelp
+2          libname rd xport 'C:\Users\SDPERE~1.EMO\AppData\Local\Temp\RtmpmWSDx7\file170469c6652c';
+NOTE: Libref RD was successfully assigned as follows: 
+      Engine:        XPORT 
+      Physical Name: C:\Users\SDPERE~1.EMO\AppData\Local\Temp\RtmpmWSDx7\file170469c6652c
+3          proc copy in=src2rd out=rd;
+4          select retail ;
+NOTE: Copying SRC2RD.RETAIL to RD.RETAIL (memtype=DATA).
+NOTE: There were 58 observations read from the data set SRC2RD.RETAIL.
+NOTE: The data set RD.RETAIL has 58 observations and 5 variables.
+NOTE: PROCEDURE COPY used (Total process time):
+      real time           0.08 seconds
+      cpu time            0.06 seconds
+      
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           0.54 seconds
+      cpu time            0.54 seconds
+      

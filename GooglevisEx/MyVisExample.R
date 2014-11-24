@@ -1,5 +1,7 @@
 library(googleVis)
-time<-rep(1:12,4)
+qtrs<-c("2010 Q1", "2010 Q2", "2010 Q3", "2010 Q4")
+time<-rep(as.yearqtr(qtrs),12)
+
 id<-rep(1:4, each=12)
 rand<-rnorm(48,0,1)
 height<-rep(c(5.8,5.1,5.9,5.0),each=12)+abs(time*rand/100)
@@ -15,6 +17,7 @@ M<-gvisMotionChart(dat, idvar = "id", timevar = "time",
                 xvar="height", yvar="weight")
 
 print(M, file='C:/Users/sdperez.EMORYUNIVAD/Desktop/My Documents/R/RSampleCode/GooglevisEx/motion2.html')
-, colorvar="", sizevar="",
+colorvar="", sizevar="",
                 date.format = "%Y/%m/%d", 
                 options = list(), chartid)
+plot(M)
