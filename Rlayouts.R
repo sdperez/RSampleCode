@@ -10,6 +10,11 @@ plot(speed,dist)
 plot(speed,dist)
 plot(speed,dist)
 grid()
-layout(matrix(1,1,1))
+layout(matrix(1,1,1))#reset to one plot per device
+plot(speed,dist)
 rug(speed)
 grid()
+
+layout(matrix(c(1,2),2,1))
+plot(speed,dist)
+plot(speed,dist)

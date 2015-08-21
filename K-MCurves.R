@@ -6,7 +6,7 @@
 #Sebastian Perez
 ######################################################Start
 #Directory#############################################
-setwd('C:/Users/sdperez.EMORYUNIVAD/Desktop/My Documents/Studies/KnechtleLiverCrossMatch')
+setwd('H:/My Documents/Studies/KnechtleLiverCrossMatch')
 #Libraries#########################################################################
 library(survival)
 #library(KMsurv) not needed
@@ -46,6 +46,11 @@ head(xmatch.dat$cRej)
 summary(as.numeric(xmatch.dat$Ftime))
 xmatch.surv.obj<-Surv(as.numeric(xmatch.dat$Ftime), xmatch.dat$cRej)
 rej.fit<-survfit(xmatch.surv.obj~xmatch.dat$crossmatch)
+rej.fit$surv
+rep(names(rej.fit$strata), rej.fit$strata)
+
+
+
 summary(rej.fit)
 plot(rej.fit, col=c(2,4))
 legend(40, .2, levels(xmatch.dat$crossmatch), lty=1,col=c(2,4))
